@@ -9,4 +9,4 @@ ENV JAVA_OPTS="-Xms128m -Xmx256m"
 
 ENTRYPOINT ["/bin/sh", "-c"]
 
-CMD ["/opt/keycloak/bin/kc.sh start --http-port=${PORT:-8080}"]
+CMD ["/opt/keycloak/bin/kc.sh start --http-port=$PORT --http-host=0.0.0.0"]
